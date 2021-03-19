@@ -4,16 +4,18 @@ class Conta:
 	#Chamamos de construtor
 	def __init__(self, numero, titular, saldo, limite):
 		#self é a própria referencia do objeto criado na memória
-		self.numero = numero
-		self.titular = titular
-		self.saldo = saldo
-		self.limite = limite
+
+		#Atributos privados
+		self.__numero = numero
+		self.__titular = titular
+		self.__saldo = saldo
+		self.__limite = limite
 
 	def extrato(self):
-		print("O saldo da conta de {} é de R$ {}".format(self.titular, self.saldo))
+		print("O saldo da conta de {} é de R$ {}".format(self.__titular, self.__saldo))
 
 	def sacar(self, valor):
-		self.saldo -= valor
+		self.__saldo -= valor
 
 	def depositar(self, valor):
-		self.saldo += valor
+		self.__saldo += valor

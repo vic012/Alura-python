@@ -48,3 +48,18 @@ class Conta:
 
 		self.sacar(valor)
 		destino.depositar(valor)
+
+	#Método Get, para retornar dados, isso pode ser ultil para relatórios
+	def get_saldo(self):
+		return self.__saldo
+
+	def get_titular(self):
+		return self.__titular
+
+	def get_limite(self):
+		return self.__limite
+
+	#Método Set, para atualizar dados dentro do meu objeto
+	#O set coloca um novo valor
+	def set_limite(self, limite):
+		self.__limite = limite

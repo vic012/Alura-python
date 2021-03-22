@@ -15,7 +15,15 @@ class Conta:
 		print("O saldo da conta de {} é de R$ {}".format(self.__titular, self.__saldo))
 
 	def sacar(self, valor):
-		self.__saldo -= valor
+		if (self.__pode_sacar(valor)):
+			self.__saldo -= valor
+		else:
+			print('O valor {} passou do limite'.format(valor))
+
+	#Método privado
+	def __pode_sacar(self, valor_a_sacar):
+		valor_disponivel = self.__saldo + self.__limite
+		return valor_a_sacar <= valor_disponivel
 
 	def depositar(self, valor):
 		self.__saldo += valor

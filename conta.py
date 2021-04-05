@@ -10,7 +10,7 @@ class Conta:
 		self.__titular = titular
 		self.__saldo = saldo
 		self.__limite = limite
-
+		
 	def extrato(self):
 		print("O saldo da conta de {} é de R$ {}".format(self.__titular, self.__saldo))
 
@@ -73,3 +73,9 @@ class Conta:
 	@limite.setter
 	def limite(self, limite):
 		self.__limite = limite
+
+	#Adicionando métodos státicos
+	#Acessar atributos do objeto
+	@staticmethod
+	def codigo_banco():
+		return {"BB": "001", "Caixa": "104", "Bradesco": "237"}
